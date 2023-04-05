@@ -63,3 +63,16 @@ print "\n@descendName \n";
 print "\n @sortedNumNatural \n";
 @descendNumNatural = reverse sort { $a <=> $b } @numbers;
 print "\n @descendNumNatural \n";
+
+
+
+# Merging - elements of list to a string
+# Use join command, first element is the string with which we join
+$string1 = join(" ","Mohan","Ekansh","Himanshu","Rohan"); 
+print "\n\n $string1 \n";
+$string2 = join(";a .","Mohan","Ekansh","Himanshu","Rohan"); 
+print "\n $string2 \n";
+
+#can also pass a list
+$string3 = join(" ", @names, "Golu"); 
+print "\n $string3 \n";
