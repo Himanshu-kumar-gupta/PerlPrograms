@@ -76,3 +76,13 @@ print "\n $string2 \n";
 #can also pass a list
 $string3 = join(" ", @names, "Golu"); 
 print "\n $string3 \n";
+
+
+
+# Spliting - opposite to merge
+# specify the splitting character first in b/w  /*/
+@splitName = split(/;a ./, $string2);
+print  "\n\n @splitName\n";
+@splitChar = split(//, "Himanshu 5a"); #using null character as split
+print  "\n @splitChar\n";
+
