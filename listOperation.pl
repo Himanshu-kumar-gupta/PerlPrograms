@@ -41,6 +41,25 @@ print "\n@list3\n";
 print "\n@list4\n"; #Output:  aa ab ac ad
 
 ($var1,$var2) = @list1; # assigns into vars as per starting index 
-print "\nvar1 = $var1    var2 = $var2 \n"
+print "\nvar1 = $var1    var2 = $var2 \n";
 
 
+
+# Sorting in list
+@numbers = (9,45,3,4,56,32,78,1);
+@sortedNum = sort @numbers; # use sort command, by default treats all elements as string
+print "\n\n@sortedNum \n"; #Output:  1 3 32 4 45 56 78 9 
+@sortedName = sort @names; 
+print "\n@sortedName \n";
+
+@descendNum = reverse sort @numbers; # for sorting in reverse
+print "\n@descendNum \n";
+@descendName = reverse sort @names;
+print "\n@descendName \n";
+
+# To sort numbers normally we need to provide sort block for comparison
+# https://www.perltutorial.org/perl-sort/
+@sortedNumNatural = sort { $a <=> $b } @numbers;
+print "\n @sortedNumNatural \n";
+@descendNumNatural = reverse sort { $a <=> $b } @numbers;
+print "\n @descendNumNatural \n";
